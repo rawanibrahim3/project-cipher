@@ -1,0 +1,619 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080D18;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #1B2A40;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #1677FF;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #AAB6C8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #00C8FF;
+}
+
+.nav-button,
+.primary-btn {
+    background: #1677FF;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-btn:hover {
+    background: #00C8FF;
+    color: #080D18;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    color: #00C8FF;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.35;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #1677FF;
+}
+
+.hero p {
+    color: #AAB6C8;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    border: 1px solid #1677FF;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    background: #111C2E;
+}
+
+.hero-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #142F58, #080D18 70%);
+}
+
+.shield {
+    font-size: 150px;
+    color: #1677FF;
+    position: relative;
+    text-shadow: 0 0 30px #1677FF;
+}
+
+.shield span {
+    position: absolute;
+    font-size: 45px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Algorithms */
+
+.algorithms-section {
+    padding: 65px 8%;
+    background: #0B1220;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 18px 0;
+    font-size: 28px;
+}
+
+.section-heading p {
+    color: #AAB6C8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.algorithm-card {
+    background: #111C2E;
+    padding: 25px;
+    border: 1px solid #1B2A40;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.algorithm-card:hover {
+    border-color: #1677FF;
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #1677FF22;
+}
+
+.algorithm-card h3 {
+    color: #00C8FF;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.algorithm-card p {
+    color: #AAB6C8;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.algorithm-card a {
+    color: #1677FF;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #718096;
+    font-size: 13px;
+    border-top: 1px solid #1B2A40;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-icon {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-button {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-icon {
+        width: 180px;
+        height: 180px;
+    }
+
+    .shield {
+        font-size: 100px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+/* Encryption Page */
+
+.crypto-container {
+    max-width: 950px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.crypto-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.crypto-heading h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    margin: 20px 0;
+}
+
+.crypto-heading h1 span {
+    color: #1677FF;
+}
+
+.crypto-heading p {
+    color: #AAB6C8;
+    line-height: 1.8;
+}
+
+.crypto-card {
+    background: #111C2E;
+    border: 1px solid #1B2A40;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+.crypto-card h2 {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.crypto-card label {
+    display: block;
+    color: #AAB6C8;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.crypto-card input,
+.crypto-card select,
+.crypto-card textarea {
+    width: 100%;
+    background: #080D18;
+    border: 1px solid #263B58;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.crypto-card input:focus,
+.crypto-card select:focus,
+.crypto-card textarea:focus {
+    border-color: #1677FF;
+    box-shadow: 0 0 8px #1677FF33;
+}
+
+.crypto-card textarea {
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.crypto-card select {
+    cursor: pointer;
+}
+
+.crypto-card select option {
+    background: #111C2E;
+}
+
+.helper {
+    color: #8293A9;
+    font-size: 12px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.key-group {
+    margin-top: 15px;
+}
+
+.crypto-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.crypto-btn:hover {
+    box-shadow: 0 0 15px #1677FF77;
+}
+
+.hill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 90px);
+    gap: 12px;
+}
+
+.hill-grid input {
+    text-align: center;
+}
+
+.result-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.result-heading h2 {
+    margin-bottom: 0;
+}
+
+.result-status {
+    color: #00C8FF;
+    font-size: 12px;
+}
+
+.result-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: #172A45;
+    color: white;
+    border: 1px solid #263B58;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #1677FF;
+}
+
+.danger-btn:hover {
+    background: #D93645;
+}
+
+.history-item {
+    padding: 15px;
+    border-bottom: 1px solid #263B58;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.history-item p {
+    color: #AAB6C8;
+    font-size: 13px;
+    margin-top: 6px;
+    word-break: break-word;
+}
+
+.history-item strong {
+    color: #00C8FF;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .crypto-container {
+        padding: 40px 15px;
+    }
+
+    .crypto-heading h1 {
+        font-size: 29px;
+    }
+
+    .crypto-card {
+        padding: 20px;
+    }
+
+    .hill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ============================= */
+/* Algorithms Page */
+/* ============================= */
+
+.algorithms-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* Page Heading */
+
+.algorithms-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.algorithms-heading h1 {
+    font-size: 38px;
+    color: #00bfff;
+    margin-bottom: 15px;
+}
+
+.algorithms-heading p {
+    color: #b8c7d9;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Algorithm Cards */
+
+.algorithm-card {
+    background: #101b2d;
+    border: 1px solid #1d3b5c;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-5px);
+    border-color: #00bfff;
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.12);
+}
+
+/* Card Titles */
+
+.algorithm-card h2 {
+    color: #00bfff;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #254765;
+    padding-bottom: 12px;
+}
+
+.algorithm-card h3 {
+    color: #39c5ff;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+
+.algorithm-card p {
+    color: #d0dbea;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+/* Lists */
+
+.algorithm-card ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.algorithm-card li {
+    color: #d0dbea;
+    line-height: 1.9;
+    margin-bottom: 8px;
+}
+
+/* Examples */
+
+.algorithm-example {
+    background: #081321;
+    border-left: 4px solid #00bfff;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-top: 15px;
+}
+
+.algorithm-example p {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background: #081321;
+    color: #b8c7d9;
+    border-top: 1px solid #1d3b5c;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .algorithms-container {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .algorithms-heading h1 {
+        font-size: 28px;
+    }
+
+    .algorithm-card {
+        padding: 20px;
+    }
+
+    .algorithm-card h2 {
+        font-size: 21px;
+    }
+
+    .algorithm-card h3 {
+        font-size: 17px;
+    }
+
+    .algorithm-card p,
+    .algorithm-card li {
+        font-size: 14px;
+    }
+}
