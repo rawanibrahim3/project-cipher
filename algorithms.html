@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms | CryptoShield</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">CryptoShield</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="encryption.html">Encryption</a></li>
+            <li><a href="decryption.html">Decryption</a></li>
+            <li><a href="algorithms.html" class="active">Algorithms</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="algorithms-container">
+
+        <div class="algorithms-heading">
+            <h1>Encryption Algorithms</h1>
+            <p>
+                Explore the history, concepts, and working principles
+                of classical encryption algorithms.
+            </p>
+        </div>
+
+        <!-- Caesar Cipher -->
+        <section class="algorithm-card">
+            <h2>1. Caesar Cipher</h2>
+
+            <p>
+                Caesar Cipher is one of the oldest and simplest
+                encryption techniques. It was used by Julius Caesar
+                to protect military messages.
+            </p>
+
+            <h3>How It Works</h3>
+            <p>
+                Each letter in the plaintext is shifted by a fixed
+                number of positions in the alphabet according to
+                the secret key.
+            </p>
+
+            <h3>Example</h3>
+            <div class="algorithm-example">
+                <p>Plaintext: HELLO</p>
+                <p>Key: 3</p>
+                <p>Ciphertext: KHOOR</p>
+            </div>
+
+            <h3>Advantages</h3>
+            <p>
+                Simple to understand and easy to implement.
+            </p>
+
+            <h3>Disadvantages</h3>
+            <p>
+                It is not secure because there are only 25 possible
+                non-zero shifts, making it easy to break.
+            </p>
+        </section>
+        <!-- Playfair Cipher -->
+        <section class="algorithm-card">
+            <h2>2. Playfair Cipher</h2>
+
+            <p>
+                Playfair Cipher is a classical encryption technique
+                that encrypts pairs of letters instead of individual
+                letters. It was invented by Charles Wheatstone and
+                popularized by Lord Playfair.
+            </p>
+
+            <h3>How It Works</h3>
+            <p>
+                A 5x5 matrix is created using a secret keyword.
+                The plaintext is divided into pairs of letters.
+                Each pair is encrypted using three rules:
+            </p>
+
+            <ul>
+                <li>Same Row: Replace each letter with the letter to its right.</li>
+                <li>Same Column: Replace each letter with the letter below it.</li>
+                <li>Rectangle: Replace each letter with the letter in the same row but the other letter's column.</li>
+            </ul>
+
+            <h3>Example</h3>
+            <div class="algorithm-example">
+                <p>Plaintext: INSTRUMENTS</p>
+                <p>Key: MONARCHY</p>
+                <p>Ciphertext: GATLMZCLRQXA</p>
+            </div>
+
+            <h3>Advantages</h3>
+            <p>
+                Encrypts pairs of letters, making simple
+                frequency analysis more difficult than Caesar Cipher.
+            </p>
+
+            <h3>Disadvantages</h3>
+            <p>
+                It is vulnerable to modern cryptanalysis and is
+                not suitable for protecting sensitive information today.
+            </p>
+        </section>
+
+
+        <!-- Vigenere Cipher -->
+        <section class="algorithm-card">
+            <h2>3. Vigenere Cipher</h2>
+
+            <p>
+                Vigenere Cipher is a polyalphabetic substitution
+                cipher. It was developed using ideas published
+                by Giovan Battista Bellaso in 1553 and later
+                became associated with Blaise de Vigenere.
+            </p>
+
+            <h3>How It Works</h3>
+            <p>
+                It uses a keyword to determine the shift applied
+                to each letter of the plaintext. The keyword is
+                repeated until it matches the plaintext length.
+            </p>
+
+            <h3>Example</h3>
+            <div class="algorithm-example">
+                <p>Plaintext: ATTACKATDAWN</p>
+                <p>Key: LEMON</p>
+                <p>Ciphertext: LXFOPVEFRNHR</p>
+            </div>
+
+            <h3>Advantages</h3>
+            <p>
+                Uses multiple substitution alphabets, making it
+                stronger than a simple Caesar Cipher.
+            </p>
+
+            <h3>Disadvantages</h3>
+            <p>
+                Repeated keywords can reveal patterns and make
+                the cipher vulnerable to cryptanalysis.
+            </p>
+        </section>
+        <!-- Hill Cipher -->
+        <section class="algorithm-card">
+            <h2>4. Hill Cipher</h2>
+
+            <p>
+                Hill Cipher is a polygraphic substitution cipher
+                invented by Lester S. Hill in 1929. It uses
+                mathematical matrices to encrypt groups of letters.
+            </p>
+
+            <h3>How It Works</h3>
+            <p>
+                Letters are converted into numbers from 0 to 25.
+                These numbers are arranged into vectors and
+                multiplied by a key matrix. The result is calculated
+                modulo 26 to produce the encrypted letters.
+            </p>
+
+            <h3>Example</h3>
+            <div class="algorithm-example">
+                <p>Plaintext: HELP</p>
+                <p>Key Matrix:</p>
+                <p>
+                    | 3  3 |<br>
+                    | 2  5 |
+                </p>
+                <p>Ciphertext: HIAT</p>
+            </div>
+
+            <h3>Advantages</h3>
+            <p>
+                Encrypts groups of letters using matrix operations,
+                making it more complex than simple substitution ciphers.
+            </p>
+
+            <h3>Disadvantages</h3>
+            <p>
+                It can be vulnerable to known-plaintext attacks
+                and requires an invertible key matrix for decryption.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 CryptoShield. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/algorithms.js"></script>
+
+</body>
+</html>

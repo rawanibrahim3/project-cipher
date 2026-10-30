@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encryption | CryptoShield</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span>⬡</span> CryptoShield
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="encryption.html" class="active">Encryption</a>
+            <a href="decryption.html">Decryption</a>
+            <a href="algorithms.html">Algorithms</a>
+        </div>
+
+        <a href="decryption.html" class="nav-button">
+            Decrypt Text
+        </a>
+    </nav>
+
+
+    
+    <main class="crypto-container">
+
+        <div class="crypto-heading">
+            <span class="tag">CRYPTOGRAPHY TOOL</span>
+
+            <h1>Text <span>Encryption</span></h1>
+
+            <p>
+                Convert your plain text into encrypted
+                messages using classical algorithms.
+            </p>
+        </div>
+
+
+        
+        <section class="crypto-card">
+
+            <h2>01. Select Algorithm</h2>
+
+            <label for="algorithm">Encryption Algorithm</label>
+
+            <select id="algorithm">
+                <option value="caesar">Caesar Cipher</option>
+                <option value="playfair">Playfair Cipher</option>
+                <option value="vigenere">Vigenere Cipher</option>
+                <option value="hill">Hill Cipher</option>
+            </select>
+
+            <p id="algorithm-info" class="helper">
+                Shift letters using a numerical key.
+            </p>
+
+        </section>
+
+
+        <!-- Key Section -->
+        <section class="crypto-card">
+
+            <h2>02. Enter Encryption Key</h2>
+
+            
+            <div class="key-group" id="caesar-key">
+                <label for="caesarValue">Shift Key (Number)</label>
+                <input type="number" id="caesarValue"
+                       value="3" min="0" max="25">
+            </div>
+
+           
+            <div class="key-group" id="playfair-key" hidden>
+                <label for="playfairValue">Keyword</label>
+                <input type="text" id="playfairValue"
+                       placeholder="Enter keyword">
+            </div>
+
+            
+            <div class="key-group" id="vigenere-key" hidden>
+                <label for="vigenereValue">Keyword</label>
+                <input type="text" id="vigenereValue"
+                       placeholder="Enter keyword">
+            </div>
+
+           
+            <div class="key-group" id="hill-key" hidden>
+
+                <label>Hill Matrix (2 × 2)</label>
+
+                <div class="hill-grid">
+                    <input type="number" id="hillA" value="3">
+                    <input type="number" id="hillB" value="3">
+                    <input type="number" id="hillC" value="2">
+                    <input type="number" id="hillD" value="5">
+                </div>
+
+                <p class="helper">
+                    Enter four numbers between 0 and 25.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Text Input -->
+        <section class="crypto-card">
+
+            <h2>03. Enter Plain Text</h2>
+
+            <textarea
+                id="plainText"
+                rows="5"
+                placeholder="Type your message here...">
+            </textarea>
+
+            <button class="primary-btn crypto-btn"
+                    id="encryptBtn">
+                🔒 Encrypt Text
+            </button>
+
+        </section>
+
+
+       
+        <section class="crypto-card">
+
+            <div class="result-heading">
+                <h2>04. Encrypted Result</h2>
+                <span class="result-status" id="status">
+                    Waiting...
+                </span>
+            </div>
+
+            <textarea
+                id="encryptedText"
+                rows="5"
+                readonly
+                placeholder="Your encrypted text will appear here...">
+            </textarea>
+
+            <div class="result-buttons">
+
+                <button class="action-btn" id="copyBtn">
+                    Copy
+                </button>
+
+                <button class="action-btn" id="downloadBtn">
+                    Download
+                </button>
+
+                <button class="action-btn danger-btn" id="clearBtn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="crypto-card">
+
+            <div class="result-heading">
+                <h2>Encryption History</h2>
+                <button class="action-btn danger-btn"
+                         id="clearHistoryBtn">Clear History</button>
+            </div>
+            <div id="historyList">
+                <p class="helper">No encryption history yet.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 CryptoShield. Educational Cryptography Platform.</p>
+    </footer>
+
+
+    <script src="js/encryption.js"></script>
+
+</body>
+</html>            
